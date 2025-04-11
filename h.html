@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatokeoChap - NECTA Results Online</title>
+    <link rel="stylesheet" href="h.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <p>MatokeoChap</p>
+            </div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">CSEE</a></li>
+                    <li><a href="#">ACSEE</a></li>
+                    <li><a href="#">DSEE</a></li>
+                    <li><a href="#">QT</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Check Your NECTA Examination Results</h1>
+            <p>Find your CSEE, ACSEE, DSEE, and QT results quickly and easily. Just enter your exam details below.</p>
+            
+            <div class="search-box">
+                <form id="searchForm">
+                    <div class="form-group">
+                        <label for="examType">Exam Type:</label>
+                        <select id="examType" required>
+                            <option value="">Select Exam Type</option>
+                            <option value="CSEE">CSEE (Form Four)</option>
+                            <option value="ACSEE">ACSEE (Form Six)</option>
+                            <option value="DSEE">DSEE (Diploma)</option>
+                            <option value="QT">Qualifying Test</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="year">Year:</label>
+                        <select id="year" required>
+                            <option value="">Select Year</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="examNumber">Exam Number:</label>
+                        <input type="text" id="examNumber" placeholder="Enter your exam number" required>
+                    </div>
+                    
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i> Search Results
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+        </div>
+        
+        <section class="popular-searches">
+            <h2 class="section-title">Popular Searches</h2>
+            <div class="search-links">
+                <a href="#">CSEE 2024 Results</a>
+                <a href="#">ACSEE 2024 Results</a>
+                <a href="#">Form Four Results</a>
+                <a href="#">Form Six 2024 Results</a>
+                <a href="#">Tops  Schools 2024</a>
+                <a href="#">NECTA Past Papers</a>
+            </div>
+        </section>
+        
+        <section class="info-cards">
+            <div class="info-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>CSEE Results</h3>
+                <p>Check your Form Four National Examination results from NECTA</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-university"></i>
+                <h3>ACSEE Results</h3>
+                <p>View your Form Six Advanced Certificate examination results</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-certificate"></i>
+                <h3>DSEE Results</h3>
+                <p>Diploma Secondary Education Examination results</p>
+            </div>
+        </section>
+        
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">CSEE Results</a></li>
+                        <li><a href="#">ACSEE Results</a></li>
+                        <li><a href="#">DSEE Results</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">meena</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>NECTA Links</h3>
+                    <ul>
+                        <li><a href="#">NECTA Website</a></li>
+                        <li><a href="#">Examination Timetable</a></li>
+                        <li><a href="#">Past Papers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 MatokeoChap.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const nav = document.getElementById('mainNav');
+            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        });
+        
+    
+        document.addEventListener('click', function(e) {
+            const nav = document.getElementById('mainNav');
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (window.innerWidth <= 768 && 
+                e.target !== nav && 
+                !nav.contains(e.target) && 
+                e.target !== menuBtn && 
+                !menuBtn.contains(e.target)) {
+                nav.style.display = 'none';
+            }
+        });
+        
+        window.addEventListener('resize', function() {
+            const nav = document.getElementById('mainNav');
+            if (window.innerWidth > 768) {
+                nav.style.display = 'block';
+            } else {
+                nav.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
